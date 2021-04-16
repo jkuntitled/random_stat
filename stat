@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                display: grid;
+                grid-template-areas: 
+                '1'
+                '2'
+                '3';
+                margin-top: 5vw;
+                justify-items:center;
+            }
+            #text {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='stat'>
+            <button onclick="random_stat()">랜덤 스텟</button>
+        </div>
+        <br>
+        <div id="text">
+
+        </div>
+        <script>
+            function random_stat() {
+                var statext = document.getElementById('text');
+                var stat = ['감수성', '공감능력', '괴짜력', '균형감각', '근력', '긍정적 사고력', '기품', '논리력', '눈치', '도덕성', '독서량', '동물 애호도', '마력', '면역력', '명랑도', '명예도', '모험심', '방어력', '분노도', '분석력', '불안감', '사교성', '설득력', '성실도', '성품', '센스', '솔직함', '순발력', '스트레스', '시력', '식물 친화도', '신앙심', '아재력', '야망', '업보', '연기력', '열정감', '영향력', '예술성','예의/예절', '외교', '외향성(혹은 내향성)', '우울감', '유머감각', '유명도', '유행 민감도', '융통성', '음흉도', '인내도', '자기중심적 사고력', '자존감', '자존심', '저항력', '적응력', '전투력(공격력)', '점프력', '정신력', '정의감', '정의로움', '정직함', '존재감', '주량', '지능', '지혜', '직관력', '진보성(혹은 보수성)', '집착성','책임감', '체력', '추리력', '추진력', '충성도', '친화력', '카리스마', '통솔력', '판단력', '학구열', '현실성', '호감도', '호기심', '화술', '경제관념'];
+                statext.innerText = stat[Math.floor(Math.random()*82)]
+            }
+
+        </script>
+    </body>
+</html>
